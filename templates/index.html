@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detection from Typing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Emotion Detection from Keyboard Typing Patterns</h1>
+    <p>Type any text in the box below. The system will analyze your typing pattern and try to predict your emotion (Happy, Sad, Calm, Stressed).</p>
+
+    <textarea id="typingArea" rows="8" cols="80"
+              placeholder="Start typing here..."></textarea>
+
+    <div class="buttons">
+        <button id="clearBtn">Clear</button>
+        <button id="analyzeBtn">Analyze Emotion</button>
+    </div>
+
+    <div class="results">
+        <h2>Results</h2>
+        <p><strong>Predicted Emotion:</strong> <span id="emotionResult">N/A</span></p>
+        <p><strong>Confidence:</strong> <span id="confidenceResult">N/A</span></p>
+        <p><strong>Typing Speed (WPM):</strong> <span id="wpmResult">N/A</span></p>
+        <p><strong>Average Key Interval (ms):</strong> <span id="avgIntervalResult">N/A</span></p>
+        <p><strong>Average Pause (ms):</strong> <span id="avgPauseResult">N/A</span></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
